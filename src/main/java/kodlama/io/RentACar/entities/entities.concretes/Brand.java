@@ -1,30 +1,23 @@
 package kodlama.io.RentACar.entities.entities.concretes;
 
+import lombok.*;
+
+import javax.persistence.*;
+
+@Table(name = "brands")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Brand {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private long id;
+    @Column(name = "name")
     private String name;
 
-    public Brand() {
-    }
-
-    public Brand(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
+//National --> natId
+
+//mapping
